@@ -8,6 +8,6 @@ spec:
   path: /apps/redis
   prune: true
   sourceRef:
-  kind: GitRepository
-  name: flux-system
+    kind: GitRepository
+    name: flux-system
   targetNamespace: redis
