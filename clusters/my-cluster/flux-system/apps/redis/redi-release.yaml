@@ -1,0 +1,25 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: redis
+  namespace: redis
+spec:
+  url: https://charts.redislabs.com/
+  interval: 1h
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: redis-enterprise-operator
+  namespace: 
+spec:
+  releaseName: redis-enterprise-operator
+  chart:
+    spec:
+      chart: redis-enterprise-operator
+      version: latest
+      sourceRef:
+        kind: HelmRepository
+        name: redis
+        namespace: redis
+  interval: 10m
