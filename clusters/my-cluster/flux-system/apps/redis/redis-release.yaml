@@ -23,3 +23,11 @@ spec:
         name: redis
         namespace: redis
   interval: 10m
+---
+apiVersion: app.redislabs.com/v1
+kind: RedisEnterpriseCluster
+metadata:
+  name: rec
+  namespace: redis
+spec:
+  nodes: 1
