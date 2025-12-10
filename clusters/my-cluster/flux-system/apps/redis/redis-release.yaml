@@ -32,7 +32,3 @@ metadata:
 spec:
   nodes: 3
   uiServiceType: NodePort
-  ports:
-  - ports: 8443
-    targetPort: 8443
-    protocol: TCP
