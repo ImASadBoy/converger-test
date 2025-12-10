@@ -30,4 +30,5 @@ metadata:
   name: rec
   namespace: redis
 spec:
-  nodes: 1
+  nodes: 3
+
