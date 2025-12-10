@@ -31,4 +31,15 @@ metadata:
   namespace: redis
 spec:
   nodes: 3
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rec-ui
+  namespace: redis
+spec:
+  type: NodePort
+  ports:
+    - port: 8443  
+      targetPort: 8443  
+      nodePort: 30443
